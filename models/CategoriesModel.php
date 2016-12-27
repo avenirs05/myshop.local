@@ -3,5 +3,7 @@
 //модель для таблицы категорий
 
 function getAllMainCatsWithChildren() {
-    echo 'test';
+    $sql = 'SELECT * 
+           FROM categories
+           WHERE parent_id = 0';
 }

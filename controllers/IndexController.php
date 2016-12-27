@@ -11,8 +11,7 @@ function indexAction($smarty) {
     $smarty->assign('pageTitle', 'Главная страница сайта');
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');
-    loadTemplate($smarty, 'footer');
-//  $smarty->display('index' . TemplatePostfix);        
+    loadTemplate($smarty, 'footer');      
 }
 
 
