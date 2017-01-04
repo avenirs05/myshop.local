@@ -21,5 +21,15 @@ function d ($value = null, $die = 1)
     if($die) die;
 }
 
+//function createSmartyRsArray($rs) {
+//    if (! $rs) return false;
+//    $smartyRs = array();
+//    while ($row = mysqli_fetch_assoc($rs)) {
+//        $smartyRs[] = $row;
+//    }
+//    
+//    return $smartyRs;
+//}
+
 
 

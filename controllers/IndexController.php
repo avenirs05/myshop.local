@@ -8,8 +8,8 @@ function testAction() {
 
 function indexAction($smarty, $db) {
     $rsCategories = getAllMainCatsWithChildren($db);
-    d($rsCategories);
     $smarty->assign('pageTitle', 'Главная страница сайта');
+    $smarty->assign('rsCategories', $rsCategories);
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');
     loadTemplate($smarty, 'footer');      
