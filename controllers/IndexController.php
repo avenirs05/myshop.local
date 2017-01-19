@@ -6,13 +6,18 @@ function testAction() {
     echo 'IndexController.php > testAction';
 }
 
-function indexAction($smarty, $db) {
-    $rsCategories = getAllMainCatsWithChildren($db);
+function indexAction($smarty, $db) 
+{ 
     $smarty->assign('pageTitle', 'Главная страница сайта');
-    $smarty->assign('rsCategories', $rsCategories);
-    loadTemplate($smarty, 'header');
-    loadTemplate($smarty, 'index');
-    loadTemplate($smarty, 'footer');      
+    $smarty->assign('rsCategories', getAllMainCatsWithChildren($db));    
+    $smarty->display('header' . TemplatePostfix);    
+    $smarty->display('index' . TemplatePostfix);
+    $smarty->display('footer' . TemplatePostfix);      
+
+//    $rsCategories = getAllMainCatsWithChildren($db);
+//    loadTemplate($smarty, 'header');
+//    loadTemplate($smarty, 'index');
+//    loadTemplate($smarty, 'footer');      
 }
 
 

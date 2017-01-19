@@ -7,14 +7,14 @@ $dbpasswd = '';
 
 // соединяемся с БД
 
-$dbConnection = mysqli_connect($dblocation, $dbuser, $dbpasswd, $dbname);
+$db = mysqli_connect($dblocation, $dbuser, $dbpasswd, $dbname);
 $sql = 'SELECT * 
            FROM categories
            WHERE parent_id = 0';
 
-if (! $dbConnection) {
+if (! $db) {
     echo 'Ошибка доступа к MySql';
     exit();
 }
 
-mysqli_set_charset($dbConnection, 'utf8');
+mysqli_set_charset($db, 'utf8');

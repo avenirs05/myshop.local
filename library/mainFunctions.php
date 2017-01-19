@@ -1,17 +1,21 @@
 <?php
 
+/**
+ * Формирование запрашиваемой страницы
+ * @param type $smarty
+ * @param string $controllerName - имя контроллера
+ * @param string $actionName - имя функции обработки страницы
+ * @param type $db
+ */
 
-function loadPage($smarty, $controllerName, $actionName = 'index', $db) 
+function defineContollerAndAction ($smarty, $controllerName, $actionName = 'index', $db) 
 {
     include_once PathPrefix . $controllerName . PathPostfix;
     $function = $actionName . 'Action';
     $function($smarty, $db);
 }
 
-function loadTemplate ($smarty, $templateName) 
-{
-    $smarty->display($templateName . TemplatePostfix);
-}
+
 
 function d ($value = null, $die = 1) 
 {
@@ -20,6 +24,16 @@ function d ($value = null, $die = 1)
     echo '</pre>';
     if($die) die;
 }
+
+
+
+
+
+
+//function loadTemplate ($smarty, $templateName) 
+//{
+//    $smarty->display($templateName . TemplatePostfix);
+//}
 
 //function createSmartyRsArray($rs) {
 //    if (! $rs) return false;

@@ -15,7 +15,7 @@ define('TemplatePostfix', '.tpl');
 define('TemplateWebPath', "/templates/{$template}/");
 
 // инициализация шаблонизатора Smarty
-// pull full path to Smarty.class.php
+// put full path to Smarty.class.php
 require ('library/Smarty/Smarty.class.php'); 
 $smarty = new Smarty();
 
@@ -25,4 +25,6 @@ $smarty->setCacheDir('tmp/smarty/cache');
 $smarty->setConfigDir('library/Smarty/configs');
 
 $smarty->assign('templateWebPath', TemplateWebPath);
+
+
 //$smarty->assign('templateWebPath', "/templates/");
