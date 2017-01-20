@@ -5,12 +5,7 @@ $dbname = 'myshop';
 $dbuser = 'root';
 $dbpasswd = '';
 
-// соединяемся с БД
-
 $db = mysqli_connect($dblocation, $dbuser, $dbpasswd, $dbname);
-$sql = 'SELECT * 
-           FROM categories
-           WHERE parent_id = 0';
 
 if (! $db) {
     echo 'Ошибка доступа к MySql';
@@ -18,3 +13,7 @@ if (! $db) {
 }
 
 mysqli_set_charset($db, 'utf8');
+
+//$sql = 'SELECT * 
+//        FROM categories
+//        WHERE parent_id = 0';

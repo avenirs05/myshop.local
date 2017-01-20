@@ -15,7 +15,17 @@ function defineContollerAndAction ($smarty, $controllerName, $actionName = 'inde
     $function($smarty, $db);
 }
 
+function createSmartyRsArray ($query) 
+{
+    if (!$query) { return false; }
 
+    $smartyRs = array();
+    while ($row = mysqli_fetch_assoc($query)) {
+        $smartyRs[] = $row;
+    }
+    
+    return $smartyRs;
+}
 
 function d ($value = null, $die = 1) 
 {
@@ -35,15 +45,7 @@ function d ($value = null, $die = 1)
 //    $smarty->display($templateName . TemplatePostfix);
 //}
 
-//function createSmartyRsArray($rs) {
-//    if (! $rs) return false;
-//    $smartyRs = array();
-//    while ($row = mysqli_fetch_assoc($rs)) {
-//        $smartyRs[] = $row;
-//    }
-//    
-//    return $smartyRs;
-//}
+
 
 
 
