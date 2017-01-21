@@ -28,3 +28,16 @@ function getAllMainCatsWithChildren($db)
 
     return $smartyRs;
 }
+
+function getCatById($catId, $db) 
+{
+    $catId = intval($catId);
+    
+    $sql = "SELECT * 
+            FROM categories
+            WHERE id = $catId";
+    
+    $query = mysqli_query($db, $sql);
+    
+    return mysqli_fetch_assoc($query);
+}
