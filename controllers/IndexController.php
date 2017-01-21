@@ -10,8 +10,8 @@ function testAction() {
 function indexAction($smarty, $db) 
 { 
     $smarty->assign('pageTitle', 'Главная страница сайта');
-    $smarty->assign('rsCategories', getAllMainCatsWithChildren($db)); 
-    $smarty->assign('rsProducts', getLastProducts(16, $db));    
+    $smarty->assign('all_Main_Cats_With_Children', getAllMainCatsWithChildren($db)); 
+    $smarty->assign('lastProducts', getLastProducts(16, $db));    
   
     $smarty->display('header' . TemplatePostfix);    
     $smarty->display('index' . TemplatePostfix);

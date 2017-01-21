@@ -8,7 +8,7 @@
  * @param type $db
  */
 
-function defineContollerAndAction ($smarty, $controllerName, $actionName = 'index', $db) 
+function loadPage ($smarty, $controllerName, $actionName = 'index', $db) 
 {
     include_once PathPrefix . $controllerName . PathPostfix;
     $function = $actionName . 'Action';
