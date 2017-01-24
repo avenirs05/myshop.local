@@ -2,7 +2,8 @@
     <div id="leftMenu">
         <div class="menuCaption">Меню:<br>            
             {foreach $all_Main_Cats_With_Children as $item}
-                <a href="/?controller=category&id={$item.id}">
+                {*<a href="/?controller=category&id={$item.id}">*}
+                <a href="/category/{$item.id}/">
                     {$item.name}
                 </a>
                 <br>
